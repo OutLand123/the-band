@@ -1,0 +1,465 @@
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* 
+1. vị trí
+2. kích thước
+3. màu sắc
+4. kiểu dáng
+ */
+
+
+.header{
+    width: 100%;
+    height: 46px;
+    background-color: black;
+    position:fixed;
+    top: 0;
+    z-index: 1;/* z là độ nổi dùng để làm nổi nhiều hay ít */
+    overflow:hidden;
+}
+
+.nav,
+.subnav{
+    list-style-type:none ;
+    
+}
+.nav>li{
+    display: inline-block;
+}
+.nav li{
+    position:relative;
+}
+.nav>li>a{
+    color: white;  
+    text-transform: uppercase;
+}
+.nav li a{
+    
+    text-decoration: none; /* làm mất gạch chân */
+    line-height: 47px;
+    padding: 0 24px;
+    display: block;
+}
+
+.nav li:hover .subnav{
+    display: block;
+}
+
+.subnav li:hover>a,
+.nav>li:hover>a{
+    color: black;
+    background-color: #ccc;
+}
+
+.subnav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    position:absolute;
+    background-color:white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.subnav a{
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+    display:block;
+}
+
+.search{
+    color:white;
+    float: right; /* cho nút search qua bên phải */
+    line-height: 46px; /* Căn giữa nút search */
+    padding: 0 21px;
+    display: inline-block;
+    cursor: pointer;
+}
+.search:hover{
+    background-color:#f44336;
+}
+.slider{
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('https://www.w3schools.com/w3images/la.jpg') top center/ cover no-repeat;
+    position: relative;
+}
+.text-content{
+    position: absolute;
+    color:white;
+    bottom: 48px;
+    width:100%; /* cho width 100% để căn giữa */
+    text-align: center; /* cho đoạn text nằm giữa */
+}
+
+.text-heading{
+    font-weight: 500;
+    font-size: 24px;
+    
+}
+.text-noidung{
+    font-size: 15px;
+    margin-top:25px;
+}
+
+.content-section{
+    width: 800px;
+    max-width: 100%;
+    padding:64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-heading{
+    letter-spacing:4px; /* khoản cách của các chữ */
+    font-weight: 100;
+    font-size:30px;
+    text-align: center;
+    
+}
+.section-slogan{
+    font-style: italic; /* phong cách chữ nghiên */
+    font-weight: 500;
+    font-size:15px;
+    text-align: center;
+    margin-top:25px;
+    opacity: 0.6; /* tạo độ mờ */
+}
+.about-text{
+    margin-top:25px;
+    font-size:15px;
+    text-align:justify; /* căn đều chữ 2 bên như word */
+    line-height: 1.2;
+}
+
+.members{
+    margin-top:48px;
+    overflow:hidden; /* thêm vào để ôm hết thẻ con */
+}
+
+.member-item{
+    float:left;
+    width:33.33%;
+    text-align:center;
+}
+
+.member-name{
+    margin-bottom:15px;
+    font-size: 15px;
+}
+.member-img{
+    border-radius: 4px;
+    width:154px;
+}
+
+.tour-section{
+    background-color:black;
+    color:white;
+}
+
+.ticker-list{
+    margin-top:40px;
+    color:black;
+    background-color:white;
+    list-style: none;
+}
+
+.ticker-list li{
+    color:#757575;
+    font-size:15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ticker{
+    background-color:#f44336;
+    margin: 0 16px;
+    padding: 3px 4px;
+    color: white;
+}
+
+.number{
+    float:right;  
+    color: white;
+    width:24px;
+    height:24px;
+    background-color:black; 
+    border-radius: 50%; 
+    text-align: center;
+    line-height: 24px;
+}
+.places-list{
+    margin-top: 32px;
+    display: inline-block;
+    overflow:hidden;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.places-item{
+    float:left;
+    width: 33.33%;
+    padding: 0 8px;
+
+}
+.places-item img{
+    width: 100%;
+    display:block;
+
+}
+.places-item img:hover{
+    opacity:0.6;
+}
+.place-body{
+    background-color:white;
+    color:black;
+    padding:16px;
+    font-size:15px;
+}
+
+.place-body h3 {
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 22px;
+}
+.p-color{
+    padding-bottom: 22px;
+    color: #757575;
+}
+.place-body p{
+    padding-bottom: 22px;
+    line-height:1.4;
+}
+.buy-ticker{
+    display:inline-block;
+    background-color:black;
+    color: white;
+    padding: 11px 16px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+.buy-ticker:hover{
+    background-color:#ccc;
+    color:black;
+}
+.contact{
+    margin-top:53px;
+    font-size:15px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+.info{
+    width:33.33%;
+    float:left;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.send-info{
+    float:right;
+}
+.name,.email,.message{
+    height: 40px;
+    width: 180px;
+    padding: 10px;
+}
+
+.message{
+    width: 100%;
+    margin-top:5px;
+}
+.send{
+    font-size: 16px;
+    font-weight: 200;
+    float:right;
+    background-color:black;
+    color:white;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.send:hover{
+    background-color:#ccc;
+    color:black;
+}
+
+.end-pic{
+    width: 100%;
+    margin-top: 120px;
+    filter: grayscale(50%);
+}
+.link-social{
+    font-size:24px;
+    font-weight: 200;
+    text-align: center;
+    padding: 72px;
+    opacity: 0.6;
+}
+.link-social p{
+    font-size:15px;
+    padding-top: 20px;
+}
+.link-social a{
+    color:black;
+}
+
+/* JS */
+.modal.open {
+    display:flex;
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content:center;
+    display:none;
+}
+.modal-container{
+    background-color:white;
+    width: 900px;
+    height:470px;
+    animation: modalface ease 0.3s; /* keyframes */
+}
+
+.close-btn{
+    padding: 16px;
+    float:right;
+    background-color: #019688;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+.close-btn:hover{
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+.modal-header{
+    line-height:129px;
+    width:100%;
+    height:129px;
+    text-align:center;
+    background-color: #019688;
+    font-size: 30px;
+    font-weight: 50;
+    color:white;
+    letter-spacing:5px;
+}
+
+.modal-label{
+    width:868px;
+    height:22px;
+    display:block;
+    margin:10px;
+}
+
+.modal-input{
+    width:868px;
+    height:40px;
+    margin:10px;
+    padding-left: 5px;
+    font-size:15px;
+}
+
+.modal-pay{
+    width:868px;
+    height:54px;
+    margin:10px;
+    background-color:#019688;
+    color:white;
+    font-size:17px;
+    border:none;
+}
+
+.modal-pay:hover{
+    background-color:#cccc;
+    color:black;
+    cursor: pointer;
+}
+
+.modal-help{
+    float: right;
+    margin:20px;
+}
+
+@keyframes modalface { /* tạo hiệu ứng trượt cho buy ticker */
+    from{ /* từ vị trí */
+        opacity: 0; /* làm mờ */
+        transform:translateY(-170px);
+    }
+    to{ /* tới vị trí */
+        opacity: 0.9;
+        transform:translateY(0);
+    }
+}
+
+
+/* responsive */
+
+/* PC */
+@media (min-width: 1024px){
+
+}
+
+/* tablet */
+@media (min-width:740px) and (max-width:1023px) {
+    .content-section{
+        width:740px;
+        max-width: 100%;
+        padding-right: 8px;
+    }
+    .info,.about-text{
+        margin: 5px 12px;
+    }
+    .send-info{
+        margin-top: 5px;
+    }
+    .modal-container{
+        width: 740px;
+    }
+    .modal-input{
+        width: 720px;
+        margin-top:20px
+    }
+    .modal-pay{
+        width:720px;
+        
+    }
+}
+
+/* MOBILE */
+@media (max-width: 740px){
+    .nav>li{
+        display:block;
+    }
+    .search{
+        display: none;
+    }
+    .mobile-menu-btn{
+        color:white;
+        float: right;
+        line-height: 46px;
+        padding: 0 21px;
+        display: inline-block;
+        position: cursor;
+    }
+    .mobile-menu-btn:hover{
+        background-color:#f44336;
+    }
+}
